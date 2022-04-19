@@ -1,0 +1,8 @@
+mixin productCard(product)
+  .card
+    img.card-img-top(src=product.imageUrl alt=product.title)
+    .card-body
+      h5.card-title #{ product.title }
+      p.card-text
+        | #{ product.description }
+      a.btn.btn-primary(href='#') Buy for #{ product.price }

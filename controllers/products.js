@@ -5,7 +5,6 @@ exports.index = (req, res) => {
   const products = Product.all((products) => {
     res.status(200).render('products/index', { products, pageTitle })
   })
-
 }
 
 exports.new = (req, res) => {
