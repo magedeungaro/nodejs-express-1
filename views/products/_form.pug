@@ -2,4 +2,4 @@ mixin productForm(submitValue)
   form(action="/products", method='POST')
     label(for="title") Name
     input(type="text", name="title", id="title")
-    input(type="submit", value="#{submitValue}")
+    input(type="submit", value="#{ submitValue }")
