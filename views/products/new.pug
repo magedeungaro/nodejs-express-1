@@ -2,9 +2,6 @@ extends ../layouts/application-layout.pug
 include _form.pug
 
 block content
-  .container
+  .container.mt-3
+    h1 Add a new product
     +productForm('Add')
-
-  a(href="/") Home
-  br
-  a(href="/products") All products

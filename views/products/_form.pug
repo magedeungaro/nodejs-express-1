@@ -1,6 +1,6 @@
 mixin productForm(submitValue)
   form(action="/products", method='POST')
-    label(for="title") Name
-    br
+    label(for="title" class="form-label mt-3") Product name
     input(type="text", name="title", id="title" class="form-control mt-3")
     input(type="submit", value=submitValue, class="btn btn-primary mt-3")
+    a(href="/products" class="btn btn-outline-danger mt-3 mx-2") Cancel
