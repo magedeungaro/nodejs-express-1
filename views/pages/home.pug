@@ -1,6 +1,6 @@
 extends ../layouts/application-layout.pug
 
 block content
-  a(href="/products") All products
-  br
-  a(href="/products/new") New product
+  .container
+    a(href="/products/new" class="btn btn-outline-success mx-2 mt-3") New product
+    a(href="/products" class="btn btn-primary mx-2 mt-3") All products
