@@ -6,8 +6,8 @@ const filePath = path.join(rootDir, 'data', 'products.json')
 const load = (callback) => {
   fs.readFile(filePath, (err, content) => {
     let products = []
-
     if (!err) products = JSON.parse(content)
+
     callback(products)
   })
 }
