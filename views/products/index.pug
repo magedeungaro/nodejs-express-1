@@ -3,14 +3,12 @@ extends ../layouts/application-layout.pug
 block content
   .container
     .products-cards__wrapper
-      .container
-        if products.length > 0
-          ul
-          each product in products
-            li.products-cards__item #{ product.title }
-        else
-          p No products yet!
+      if products.length > 0
+        ul
+        each product in products
+          li.products-cards__item #{ product.title }
+      else
+        p No products yet!
 
-    a(href="/") Home
-    br
-    a(href="/products/new") Add new product
+    a(href="/products/new" class="btn btn-outline-primary mx-2 mt-3") Add new product
+    a(href="/" class="btn btn-outline-dark mx-2 mt-3") Home
