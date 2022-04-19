@@ -3,4 +3,5 @@ include _form.pug
 
 block content
   .container
-    +productForm('Edit')
+    h1 Edit #{ product.title }
+    +productForm('Edit', true)

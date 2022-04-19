@@ -1,6 +1,10 @@
-mixin productForm(submitValue)
+mixin productForm(submitValue, edit)
   form(action="/products", method='POST')
     label(for="title" class="form-label mt-3") Product name
     input(type="text", name="title", id="title" class="form-control mt-3")
+
+    if edit
+      input(type="hidden", name="_method", value="PATCH")
+
     input(type="submit", value=submitValue, class="btn btn-primary mt-3")
     a(href="/products" class="btn btn-outline-danger mt-3 mx-2") Cancel

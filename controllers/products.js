@@ -19,3 +19,8 @@ exports.create = (req, res) => {
   product.save()
   res.redirect('/products')
 }
+
+exports.edit = (req, res) => {
+  const pageTitle = 'Edit product'
+  res.render('products/edit', { pageTitle, product })
+}
