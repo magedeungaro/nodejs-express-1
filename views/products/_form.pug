@@ -1,10 +1,20 @@
 mixin productForm(submitValue, edit)
   form(action="/products", method='POST')
-    label(for="title" class="form-label mt-3") Product name
-    input(type="text", name="title", id="title" class="form-control mt-3")
-    input(type="text", name="imageUrl", id="imageUrl" class="form-control mt-3")
-    input(type="number", name="price", id="price" class="form-control mt-3")
-    input(type="text", name="description", id="description" class="form-control mt-3")
+    .mb-3
+      label(for="title" class="form-label mt-3") Product name
+      input(type="text", name="title", id="title" class="form-control")
+
+    .mb-3
+      label(for="imageUrl" class="form-label mt-3") Image Url
+      input(type="text", name="imageUrl", id="imageUrl" class="form-control")
+
+    .mb-3
+      label(for="price" class="form-label mt-3") Price
+      input(type="number", name="price", id="price" class="form-control")
+
+    .mb-3
+      label(for="description" class="form-label mt-3") Description
+      textarea(name="description", id="description" class="form-control")
 
     if edit
       input(type="hidden", name="_method", value="PATCH")
