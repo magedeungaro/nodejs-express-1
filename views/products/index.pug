@@ -1,0 +1,16 @@
+extends ../layouts/application-layout.pug
+
+block content
+  .container
+    .products-cards__wrapper
+      .container
+        if products.length > 0
+          ul
+          each product in products
+            li.products-cards__item #{ product.title }
+        else
+          p No products yet!
+
+    a(href="/") Home
+    br
+    a(href="/products/new") Add new product

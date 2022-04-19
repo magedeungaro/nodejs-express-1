@@ -1,0 +1,11 @@
+extends ../layouts/application-layout.pug
+
+block content
+  form(action="/products", method='POST')
+    label(for="title") Name
+    input(type="text", name="title", id="title")
+    input(type="submit", value="Add")
+
+  a(href="/") Home
+  br
+  a(href="/products") All products
