@@ -14,8 +14,7 @@ exports.new = (req, res) => {
 }
 
 exports.create = (req, res) => {
-  const title = req.body.title
-  const product = new Product(title)
+  const product = new Product(req.body)
   product.save()
   res.redirect('/products')
 }
