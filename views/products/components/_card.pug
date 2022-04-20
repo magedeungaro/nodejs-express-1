@@ -5,4 +5,4 @@ mixin productCard(product)
       h5.card-title #{ product.title }
       p.card-text
         | #{ product.description }
-      a.btn.btn-primary(href='#') Buy for #{ product.price }
+      a.btn.btn-primary(href='#') Buy for $#{ product.price }
